@@ -11,8 +11,8 @@ function solution(emergency) {
   return emergency.map((v) => sortEmerg.findIndex((i) => i === v) + 1);
 }
 
-function solution(emergency) {
-  const sortEmerg = emergency.sort((a, b) => b - a);
-  // sort는 배열 자체를 변환하기 때문에 [...emerency]로 해서 정렬해야함.
-  return emergency.map((v) => sortEmerg.findIndex((s) => s === v) + 1);
-}
+// function solution(emergency) {
+//   const sortEmerg = emergency.sort((a, b) => b - a);
+//   // sort는 배열 자체를 변환하기 때문에 [...emerency]로 해서 정렬해야함.
+//   return emergency.map((v) => sortEmerg.findIndex((s) => s === v) + 1);
+// }
