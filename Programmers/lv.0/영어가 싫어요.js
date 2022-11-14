@@ -19,6 +19,7 @@ function solution(numbers) {
 }
 
 //replaceAll(pattern, replacement)
+//22.1.3 update
 function solution(numbers) {
   const numStr = [
     'zero',
