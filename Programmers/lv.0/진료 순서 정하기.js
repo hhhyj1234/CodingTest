@@ -5,7 +5,8 @@
  * return하도록 solution 함수를 완성해주세요. */
 
 // 두 배열의 value 값이 같으면 emergency의 value에 sortEmerg의 key(+1) 값을 주고싶음
-// => findIndex + 1
+// => map, findIndex + 1
+// => indexOf 사용해도 되겠다
 function solution(emergency) {
   const sortEmerg = [...emergency].sort((a, b) => b - a);
   return emergency.map((v) => sortEmerg.findIndex((i) => i === v) + 1);
