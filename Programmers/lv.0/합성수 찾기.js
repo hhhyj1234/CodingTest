@@ -5,6 +5,25 @@
  * return하도록 solution 함수를 완성해주세요. */
 
 function solution(n) {
+  const isPrime = (num) => {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) return false;
+    }
+    return true;
+  };
+
+  let count = 0;
+
+  for (let i = 1; i <= n; i++) {
+    if (!isPrime(i)) count += 1;
+  }
+
+  return count;
+}
+
+//
+
+function solution(n) {
   let count = 0;
   for (let i = 2; i <= n; i++) {
     if (!isPrime(i)) continue;
