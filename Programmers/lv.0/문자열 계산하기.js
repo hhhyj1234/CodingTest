@@ -4,5 +4,11 @@
  * 수식을 계산한 값을 return 하는 solution 함수를 완성해주세요. */
 
 function solution(my_string) {
+  return new Function('return ' + my_string)();
+}
+
+const solution = eval;
+
+function solution(my_string) {
   return eval(my_string);
 }
