@@ -5,6 +5,15 @@
  * 머쓱이가 구한 값을 return 하도록 solution 함수를 완성해보세요. */
 
 function solution(s) {
+  const arr = s.split(' ');
+  while (arr.includes('Z')) {
+    let idx = arr.indexOf('Z');
+    arr.splice(idx - 1, 2);
+  }
+  return arr.reduce((s, v) => s + +v, 0);
+}
+
+function solution(s) {
   s = s.split(' ');
   let arr = [];
   for (let v of s) v === 'Z' ? (arr.length ? arr.pop() : '') : arr.push(v);
