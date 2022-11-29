@@ -5,6 +5,21 @@
  * 머쓱이가 구한 값을 return 하도록 solution 함수를 완성해보세요. */
 
 function solution(s) {
+  s = s.split(' ');
+  let arr = [];
+  for (let v of s) v === 'Z' ? (arr.length ? arr.pop() : '') : arr.push(v);
+  return arr.reduce((a, v) => a + +v, 0);
+}
+/** run time
+테스트 1 〉	통과 (0.07ms, 33.5MB)
+테스트 2 〉	통과 (0.06ms, 33.5MB)
+테스트 3 〉	통과 (0.07ms, 33.5MB)
+테스트 4 〉	통과 (0.09ms, 33.5MB)
+테스트 5 〉	통과 (0.08ms, 33.5MB)
+테스트 6 〉	통과 (0.08ms, 33.5MB)
+테스트 7 〉	통과 (0.06ms, 33.6MB) */
+
+function solution(s) {
   const arr = s.split(' ');
   while (arr.includes('Z')) {
     let idx = arr.indexOf('Z');
