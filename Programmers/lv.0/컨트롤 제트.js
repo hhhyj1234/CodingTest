@@ -8,6 +8,18 @@ function solution(s) {
   const arr = s.split(' ');
   while (arr.includes('Z')) {
     let idx = arr.indexOf('Z');
+    if (idx === 0) arr.shift();
+    else {
+      arr.splice(idx - 1, 2);
+    }
+  }
+  return arr.reduce((s, v) => s + +v, 0);
+}
+
+function solution(s) {
+  const arr = s.split(' ');
+  while (arr.includes('Z')) {
+    let idx = arr.indexOf('Z');
     arr.splice(idx - 1, 2);
   }
   return arr.reduce((s, v) => s + +v, 0);
