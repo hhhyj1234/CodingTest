@@ -5,6 +5,14 @@
  * return하고 밀어서 B가 될 수 없으면 -1을 return 하도록 solution 함수를 완성해보세요. */
 
 let solution = (a, b) => (b + b).indexOf(a);
+/**
+테스트 1 〉	통과 (0.02ms, 33.4MB)
+테스트 2 〉	통과 (0.02ms, 33.5MB)
+테스트 3 〉	통과 (0.02ms, 33.4MB)
+테스트 4 〉	통과 (0.02ms, 33.5MB)
+테스트 5 〉	통과 (0.02ms, 33.5MB)
+테스트 6 〉	통과 (0.02ms, 33.5MB)
+테스트 7 〉	통과 (0.02ms, 33.4MB) */
 
 function solution(A, B) {
   if (A === B) return 0;
@@ -17,6 +25,14 @@ function solution(A, B) {
   }
   return -1;
 }
+/**
+테스트 1 〉	통과 (0.04ms, 33.6MB)
+테스트 2 〉	통과 (0.04ms, 33.6MB)
+테스트 3 〉	통과 (0.03ms, 33.6MB)
+테스트 4 〉	통과 (0.13ms, 33.6MB)
+테스트 5 〉	통과 (0.04ms, 33.4MB)
+테스트 6 〉	통과 (0.04ms, 33.6MB)
+테스트 7 〉	통과 (0.12ms, 33.5MB) */
 
 // 3 실패
 // function solution(A, B) {
