@@ -49,6 +49,7 @@ function solution(score) {
 // sort: 배열 자체를 수정함!!!!!!!!
 function solution(score) {
   const avg = score.map((v) => (v[0] + v[1]) / 2);
+  // /2 굳이 안 해도 됨
   const avgSort = [...avg].sort((a, b) => b - a);
   return avg.map((v) => avgSort.findIndex((s) => s === v) + 1);
 }
