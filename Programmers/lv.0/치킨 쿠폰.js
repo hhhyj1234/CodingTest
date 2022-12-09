@@ -4,8 +4,20 @@
  * 시켜먹은 치킨의 수 chicken이 매개변수로 주어질 때 받을 수 있는 최대 서비스 치킨의 수를 return하도록 solution 함수를 완성해주세요. */
 
 function solution(chicken) {
+  let answer = 0;
+  let coupon = chicken;
+
+  while (coupon >= 10) {
+    answer = answer + parseInt(coupon / 10);
+    coupon = parseInt(coupon / 10) + (coupon % 10);
+  }
+
+  return answer;
+}
+
+function solution(chicken) {
   let count = 0;
-  let coupon = chicken % 10; // 108개를 주문하면 쿠폰은 1개가 남는다.
+  let coupon = chicken % 10;
   let left = Math.floor(chicken / 10);
   count += left;
   left += coupon;
@@ -13,9 +25,7 @@ function solution(chicken) {
     coupon = left % 10;
     left = Math.floor(left / 10);
     count += left;
-    if (left === 0) {
-      break;
-    }
+    if (left === 0) break;
     left += coupon;
   }
   return count;
