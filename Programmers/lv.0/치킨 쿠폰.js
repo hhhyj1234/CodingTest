@@ -5,18 +5,34 @@
 
 function solution(chicken) {
   let count = 0;
-  let coupon = 0;
+  let coupon = chicken % 10; // 108개를 주문하면 쿠폰은 1개가 남는다.
+  let left = Math.floor(chicken / 10);
+  count += left;
+  left += coupon;
   while (true) {
-    count += Math.floor(chicken / 10);
-    console.log('count', count);
-    coupon += chicken % 10;
-    console.log('coupon', coupon);
-    chicken = Math.floor(chicken / 10);
-    console.log('chicken', chicken);
-    if (coupon >= 10) {
-      count += Math.floor(coupon / 10);
-      coupon %= coupon;
+    coupon = left % 10;
+    left = Math.floor(left / 10);
+    count += left;
+    if (left === 0) {
+      break;
     }
+    left += coupon;
   }
   return count;
 }
+
+// break를 어떻게 걸어야하는지 모르겠음
+// function solution(chicken) {
+//   let count = 0;
+//   let coupon = 0;
+//   while (true) {
+//     count += Math.floor(chicken / 10);
+//     coupon += chicken % 10;
+//     chicken = Math.floor(chicken / 10);
+//     if (coupon >= 10) {
+//       count += Math.floor(coupon / 10);
+//       coupon %= coupon;
+//     }
+//   }
+//   return count;
+// }
